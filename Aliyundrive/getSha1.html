@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-TW">
     <head>
-        <title>获取文件sha1</title>
+        <title>獲取文件sha1</title>
         <script src="https://cdn.bootcdn.net/ajax/libs/js-sha1/0.6.0/sha1.min.js"></script>
     </head>
     <body>
         <select onchange="document.getElementById('upload_file').webkitdirectory=this.value;">
-            <option value="">选择文件</option>
-            <option value="1">选择文件夹</option>
+            <option value="">選擇文件</option>
+            <option value="1">選擇文件夾</option>
         </select>
         <input id="upload_file" type="file" name="upload_filename" multiple="multiple">
         <input id="upload_submit" onclick="preup();" value="生成sha1" type="button">
-        <button onclick="CopyAllDownloadUrl();">复制结果</button>
+        <button onclick="CopyAllDownloadUrl();">覆制結果</button>
         <hr>
         <textarea id="result" style="width: 100%;"></textarea>
         <br>
-        <button onclick="change2Tamper();">转换给油猴插件用</button><button onclick="change1Tamper();">将油猴插件结果转换</button>
+        <button onclick="change2Tamper();">轉換給油猴插件用</button><button onclick="change1Tamper();">將油猴插件結果轉換</button>
         <div id="progress"></div>
         <script>
             var result1 = document.getElementById('result');
@@ -70,13 +70,13 @@
                 result1.select();
                 result1.setSelectionRange(0, result1.value.length);
                 document.execCommand("copy");
-                alert("复制成功，请粘贴");
+                alert("覆制成功，請粘貼");
             }
             function change2Tamper() {
                 let e = result1.value.split(/\n/g);
                 let t = e[0].split(',');
                 if (t.length<3) {
-                    alert("有误");
+                    alert("有誤");
                     return;
                 }
                 result1.value = '';
@@ -101,7 +101,7 @@
                 try {
                     window.atob(e[0]);
                 } catch {
-                    alert("有误");
+                    alert("有誤");
                     return;
                 }
                 result1.value = '';
