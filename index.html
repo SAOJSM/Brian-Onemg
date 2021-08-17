@@ -6,7 +6,7 @@
 		<div id='test1'>
 			<a id="direct">No link here!</a><br>
 			If not auto jump, click the link to jump.<br>
-			如果长时间未跳转，请点击上方链接继续安装。<br>
+			如果長時間未跳轉，請點擊上方鏈接繼續安裝。<br>
 		</div>
 		<script>
       			var q = new Array();
@@ -31,10 +31,10 @@
 				document.getElementById('direct').href = lasturl;
 				window.location = lasturl;
 			} else {
-				var str='Error! 有误！';
-				if (!url) str+='No url! url参数为空！';
+				var str='Error! 有誤！';
+				if (!url) str+='No url! url參數為空！';
 				else document.getElementById('test1').innerHTML='<a href="'+decodeURIComponent(decodeURIComponent(url))+'">'+decodeURIComponent(decodeURIComponent(url))+'</a><br>';
-				if (!code) str+='No code from MS! 微软code为空！';
+				if (!code) str+='No code from MS! 微軟code為空！';
 				document.getElementById('test1').innerHTML+=str+'<br>'+decodeURIComponent(query.replace(/\+/g,'%20'));
 				//alert(str);
 			}
